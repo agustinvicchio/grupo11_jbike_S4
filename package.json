@@ -15,9 +15,13 @@
     "colors": "^1.4.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "method": "^2.0.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
+    "override": "^0.0.1",
+    "validator": "^13.6.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/agustinvicchio/repo2_grupo11.git"

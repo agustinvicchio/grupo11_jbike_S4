@@ -6,6 +6,14 @@ app.use(express.static('public'));
 
 
 
+//Declaraciones necesarias para poder utilziar POST
+app.use(express.urlencoded ({extended:false}));
+app.use(express.json());
+
+
+//Declaraciones necesarias para PUT Y DELETE
+const methodOverrider = require('method-override');
+app.use(methodOverrider("_method"));
 
 
 //Los gerentes de ruteo
