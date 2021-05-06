@@ -7,7 +7,7 @@
     <%- include('../partials/headercat') %>
     <section class = "creacion">
             <h1>Crearcion de producto</h1>
-            <form class = "creacion-producto" method="POST" action="">
+            <form class = "creacion-producto" method="POST" action="/products/crear" enctype="multipart/form-data">
                 <span>Marca</span>
                 <input type = "text" name = "marcaProducto">
                 <span>Modelo</span>
@@ -17,9 +17,7 @@
                 <span>Ingrese descripcion bajo fotos</span>
                 <textarea name = "desc2" placeholder="Ingrese texto aqui"></textarea>
                 <span>Coloque la foto principal</span>
-                <input name = "foto-principal" type = "file" class = "foto-principal" >
-                <span>Coloque las fotos secundarias</span>
-                <input name = "fotos-secundarias" type="file" class = "fotos-secundarias"> 
+                <input name = "imagen" type = "file" class = "foto-principal" >
                 <span>Rodados</span>
                 <input type = "text" name = "rodadosProducto" placeholder="ej: 24,26,28">
                 <span>Colores</span>
