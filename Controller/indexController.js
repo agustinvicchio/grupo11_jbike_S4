@@ -14,7 +14,8 @@ const controller = {
             console.log("Lei de un archivo que ya tiene algo");
             productos = JSON.parse(archivoProductos);
         }
-        res.render('index', {'producto':productos});
+
+        res.render('index', {'productos':productos});
     }
 }
 

@@ -16,8 +16,8 @@ const controller = {
         }
         let id = req.query.productID;
         console.log(id)
-        let productsend = products[id-1];
-        res.render('./products/product', {'product':prodcutsend});
+        let productsend = productos[id-1];
+        res.render('./products/product', {'product':productsend});
     },
 
     crear: (req,res) => {
