@@ -747,6 +747,7 @@ body .productos .carusel .articulos{
     justify-content: space-around;
 }
 
+
 body .productos  a{
     display: flex;
     flex-direction: column;
@@ -760,8 +761,6 @@ body .productos  a{
     transition-duration: 0.3s;
     margin: 10px;
     max-width: 400px;
-
-
 }
 
 body .productos article:hover{

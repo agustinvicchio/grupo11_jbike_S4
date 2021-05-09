@@ -2,7 +2,7 @@ fs = require('fs');
 const controller = {
     index : (req,res) => {
         console.log("renderizando al index");
-        let archivoProductos = fs.readFileSync('productos.JSON', {enconding: 'utf-8'}); 
+        let archivoProductos = fs.readFileSync('productos.json', {enconding: 'utf-8'}); 
         let productos;
         if(archivoProductos == "")
         {

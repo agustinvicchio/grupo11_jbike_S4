@@ -22,11 +22,12 @@ let fileUpload = multer({storage});
 router.get('/product' , productsController.product);
 router.get('/carrito', productsController.carrito);
 router.get('/crear' , productsController.crear);
-
-
+router.get('/edit/:id' , productsController.edit);
 
 //POST
-
 router.post('/crear' , fileUpload.single('imagen'),productsController.guardar);
+
+//PUT
+router.put('/:id' ,fileUpload.single('imagen'), productsController.update)
 
 module.exports = router;

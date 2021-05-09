@@ -7,7 +7,7 @@
     <%- include('../partials/headercat') %>
         <main>
             <section class="sectionLeft">
-                <img src="../image/biciImg1.jpg" id="imagenPrincipal">
+                <img src="../image/productsimages/<%=product.imagen %>" id="imagenPrincipal">
                 <div class="imagenesAbajo">
                     <img src="../image/biciImgA.jpg" id="imagenSecundaria">
                     <img src="../image/biciImgB.jpg" id="imagenSecundaria">
@@ -15,42 +15,42 @@
                     <img src="../image/biciImgD.jpg" id="imagenSecundaria">
                 </div>
                 <p class="descripcionProducto">
-                    Sed sed arcu tincidunt, volutpat diam at, faucibus dolor. 
-                    Morbi eu lacus et ligula laoreet bibendum sit amet vitae massa. 
-                    Integer lobortis odio non mauris semper pretium. Integer rhoncus purus id nisl bibendum accumsan. 
-                    Nulla rhoncus quam elit, in convallis lacus aliquam eget. Ut mi enim, rhoncus ac enim eget, varius pharetra tortor. 
-                    Curabitur sit amet tortor egestas, tempor tortor in, accumsan ligula. Mauris sit amet elit vitae ligula auctor consectetur. 
-                    Donec at diam sed justo ornare fringilla quis in erat. 
-                    Curabitur vulputate euismod porttitor. Vestibulum interdum at metus quis maximus. 
-                    Aenean ullamcorper malesuada urna, ac rutrum velit porta a. 
-                    Vivamus elementum leo felis, sed facilisis enim faucibus eu.
+                    <%= product.desc1 %>
                 </p>
             </section>
             <section class="sectionRight">
-                <h1>PRODUCT NAME - MODEL</h1>
-                <h2>In sit amet pharetra nulla, in congue eros. Phasellus fermentum lobortis eros, eu tincidunt urna semper ut. </h2>
-                <h3>$99.000,00</h3>
+                <h1 class = "precio"> <%= product.marca + " " + product.modelo %></h1>
+                <h2 class ="desc2">  <%= product.desc2 %> </h2>
+                <h3> <%= product.precio %>$</h3>
                 <form action="" method="">
                     <div class="caracteristicas">
                         <select name="rodado" id="rodado">
-                            <option value="24">24</option>
-                            <option value="26">26</option>
-                            <option value="28">28</option>
+                            <% for(let i =0;i<product.rodados.length;i++) { %>
+                           
+                            <option value="<%= product.rodados[i] %>"> <%= product.rodados[i] %></option>
+                        <% } %>
                         </select>
                         <select name="color" id="color">
-                            <option value="amarillo">Amarillo</option>
-                            <option value="naranja">Naranja</option>
-                            <option value="fuxia">Fuxia</option>
+                            <% for(let i =0;i<product.colores.length;i++) { %>
+                           
+                                <option value="<%= product.colores[i] %>"> <%= product.colores[i] %></option>
+                            <% } %>
                         </select>
                     </div>
                     <div class="counter">
                         <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="1">
+                        <input type="text" value="<%= product.stock %>">
                         <span class="up"  onClick='increaseCount(event, this)'>+</span>
                     </div>
+
                     <button class="product-botton" >Agregar al carrito</button>
+
+
                 </form>
-            <p class="cuotas">Hasta 12 cuotas sin interes</p>
+                <h1 class="cuotas">Hasta <%= product.cuotas %> cuotas sin interes</h1>
+                <a href="/products/edit/<%=product.id%>"><button class="product-botton">Editar</button></a>
+
+
             </section>
         </main>
 

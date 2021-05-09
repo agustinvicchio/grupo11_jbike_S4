@@ -9,27 +9,27 @@
 
             <div class="carusel">
                 <div class="titulo">
-                    <span class="hvr-hang">Mountain Bikes</span>
+                    <span class="hvr-hang">E-bike</span>
                 </div>
                 <% if(productos.length == 0 || productos == undefined ) { %> 
                     <div class = "empty">
-                    <h2>Aun no hay usuarios en la base</h2>
+                    <h1>Aun no hay productos en la base</h1>
                     </div>
                 <% }  %>
-                <% for(let i = 0;i<productos.length || i>3;i++) { %>
+                <% for(let i = 0;i<productos.length || i>5;i++) { %>
                 <div class="articulos">
                     <a href="/products/product?productID=<%= productos[i].id %>">
                         <article class="carta">
                             <img src="../image/productsimages/<%= productos[i].imagen %>" width="100%" alt="santacruz">
                             <div class="info">
-                                <span class="precio">$<%= productos[i].precioProducto %></span>
+                                <span class="precio">$<%= productos[i].precio %></span>
                                 <span class="descripcion"> <%= productos[i].marca %> </span>           
                             </div>
                         </article>
                     </a>
+                    <% } %>
 
                 </div>
-                <% } %>
                 </div>
         </section>
 
