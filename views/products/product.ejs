@@ -44,11 +44,15 @@
                     </div>
 
                     <button class="product-botton" >Agregar al carrito</button>
+                    <button class="product-botton"><a href="/products/edit/<%=product.id%>">Editar</a></button>
+
 
 
                 </form>
                 <h1 class="cuotas">Hasta <%= product.cuotas %> cuotas sin interes</h1>
-                <a href="/products/edit/<%=product.id%>"><button class="product-botton">Editar</button></a>
+                <form action="/products/delete/<%=product.id%>?_method=DELETE" method ="POST">
+                    <button class="product-botton" >Delete</button>
+                </form>
 
 
             </section>

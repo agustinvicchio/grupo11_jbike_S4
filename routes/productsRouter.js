@@ -28,6 +28,10 @@ router.get('/edit/:id' , productsController.edit);
 router.post('/crear' , fileUpload.single('imagen'),productsController.guardar);
 
 //PUT
-router.put('/:id' ,fileUpload.single('imagen'), productsController.update)
+router.put('/:id' ,fileUpload.single('imagen'), productsController.update);
+
+//Delete
+router.delete('/delete/:id' , productsController.delete);
+
 
 module.exports = router;

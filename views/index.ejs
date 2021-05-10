@@ -9,7 +9,7 @@
 
             <div class="carusel">
                 <div class="titulo">
-                    <span class="hvr-hang">E-bike</span>
+                    <span class="hvr-hang">Top 4</span>
                 </div>
                 <% if(productos.length == 0 || productos == undefined ) { %> 
                     <div class = "empty">
@@ -20,7 +20,34 @@
                 <div class="articulos">
                     <a href="/products/product?productID=<%= productos[i].id %>">
                         <article class="carta">
-                            <img src="../image/productsimages/<%= productos[i].imagen %>" width="100%" alt="santacruz">
+                            <img src="../image/productsimages/<%= productos[i].imagen %>" width="100%" alt="IMG product">
+                            <div class="info">
+                                <span class="precio">$<%= productos[i].precio %></span>
+                                <span class="descripcion"> <%= productos[i].marca %> </span>           
+                            </div>
+                        </article>
+                    </a>
+                    <% } %>
+
+                </div>
+                </div>
+        </section>
+        <section class="productos">
+
+            <div class="carusel">
+                <div class="titulo">
+                    <span class="hvr-hang">Top 4</span>
+                </div>
+                <% if(productos.length == 0 || productos == undefined ) { %> 
+                    <div class = "empty">
+                    <h1>Aun no hay productos en la base</h1>
+                    </div>
+                <% }  %>
+                <% for(let i = 0;i<productos.length || i>5;i++) { %>
+                <div class="articulos">
+                    <a href="/products/product?productID=<%= productos[i].id %>">
+                        <article class="carta">
+                            <img src="../image/productsimages/<%= productos[i].imagen %>" width="100%" alt="IMG product">
                             <div class="info">
                                 <span class="precio">$<%= productos[i].precio %></span>
                                 <span class="descripcion"> <%= productos[i].marca %> </span>           
