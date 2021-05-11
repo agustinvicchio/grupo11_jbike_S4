@@ -35,6 +35,10 @@ app.use('/users' , usersRouter);
 
 
 //Levantamos servidor y por si nos dan un puerto
-app.set('port', process.env.PORT || 3000);
+const puerto = process.env.PORT;
+app.listen(puerto || 3000, () => {
+console.log("Servidor corriendo en el puerto 3000");
+});
+/*app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'));
-console.log("Server on port".trap.random, app.get('port'));
+console.log("Server on port".trap.random, app.get('port')); */
